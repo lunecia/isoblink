@@ -1,4 +1,3 @@
-
 //////////////////////////////////////
 
 //mixin
@@ -15,7 +14,6 @@ $MQs: true;
 	    $bp-tablet-wide: "(min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)";
 	    $bp-desktop: "(max-width: 100em)";
 	    $bp-over: "(min-width: 1460px)";
-	    $bp-mini: "(max-device-width: 320px)";
 
 	  	
 	    @if $point == desktop {
@@ -32,9 +30,6 @@ $MQs: true;
 	    }
 	    @else if $point == over {
 	      	@media #{$bp-over} { @content; }
-	    }
-	    @else if $point == mini {
-	      	@media #{$bp-mini} { @content; }
 	    }
   	}
 }
@@ -130,11 +125,10 @@ $MQs: true;
 
 //////////////////////////////////////
 
-$black: #1e1e1e;
+$black: #1a1b1d;
 $white: #ffffff;
-$red: #a11d21;
-$dark-red: #a11d21;
 $gray: #ebebeb;
+$orange: #f15f0c;
 
 $transition: .5s;
 

@@ -3,10 +3,10 @@
 	left: 0;
 	height: 100vh;
 	width: 100%;
-	// background: $black;
+	transition: $transition;
 	overflow: hidden;
 	.background-ani {
-		background: url('../images/01-title/isobar-sprite.jpg');
+		background-image: url('../images/01-title/isobar-sprite.jpg');
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%) translateX(-2%);
@@ -15,7 +15,24 @@
 		background-size: 100% 100%;
 		transition: .5s;
 		&.ani {
-			animation: fade 3.5s steps(24) forwards;
+			animation: fade 3.5s 1.5s steps(24) forwards;
+		}
+	}
+	.scroll {
+		width: 2px;
+		height: 70px;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		display: none;
+		&:before {
+			content: '';
+			background: $gray;
+			position: absolute;
+			top: 0;
+			width: 2px;
+			display: block;
+			animation: fadeHeight 2s ease infinite;
 		}
 	}
 }
@@ -27,5 +44,14 @@
   100% {
     transform: translateY(-50%) translateX(-100%);
     left: 104%;
+  }
+}
+
+@keyframes fadeHeight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 70px;
   }
 }

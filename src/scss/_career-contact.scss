@@ -1,0 +1,61 @@
+.career-contact {
+	position: relative;
+	background-color: $gray;
+	.bg {
+		position: relative;
+		p.left {
+			@include font-size(36);
+			position: absolute;
+			color: $white;
+			transform: rotate(-90deg);
+			float: left;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			opacity: 0.8;
+			margin: 21% 0 0 -2%;
+		}
+		p.right {
+			@extend p.left;
+			transform: rotate(90deg);
+			right: 0;
+			margin: 12% -4% 0 0%;
+		}
+	}
+	.container {
+		.career-contact-box {
+			text-align: center;
+			section.career, section.contact {
+				display: inline-block;
+				width: 48%;
+				height: 400px;
+				padding: 50px;
+				vertical-align: top;
+				.tagTitle {text-align: left;}
+				.career-box, .contact-box {
+					p {
+						@include font-size(16);
+						line-height: 145%;
+						padding-bottom: 50px;
+						text-align: left;
+					}
+				}
+			}
+			section.contact {
+				.contact-box{
+					.group-btn {
+						.btn {
+							display: inline-block;
+							width: 45%;
+							&.mail {
+								float: left;
+							}
+							&.map {
+								float: right;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

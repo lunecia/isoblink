@@ -214,7 +214,6 @@ h1,h2,h3,h4,h5,h6,p,a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-<<<<<<< HEAD
 }
 
 
@@ -248,11 +247,24 @@ h1,h2,h3,h4,h5,h6,p,a {
 	}
 }
 
-
-
-
-
-
-=======
+a.btn {
+	@include font-size(18);
+	display: block;
+	background-color: $orange;
+	color: $white;
+	padding: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	transition: background-color 0.5s;
+	&:hover {
+		background-color: #c44600;
+	}
 }
->>>>>>> oumho
+
+.career-contact-border {
+	border: 3px solid $orange;
+    padding: 60px 40px;
+    box-shadow: 0 0 10px #ccc;
+    margin: 10px 0;
+    height: 300px;
+}

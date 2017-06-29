@@ -1,22 +1,121 @@
 .work-blog {
+	position: relative;
 	background-color: $black;
+	.test {
+		background-color: $black;
+		height: 500px;
+	}
 	.bg {
-		p {
+		position: relative;
+		p.left {
+			@include font-size(36);
+			position: absolute;
 			color: $white;
 			transform: rotate(-90deg);
 			float: left;
-			margin-top: 250px;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			opacity: 0.6;
+			margin: 25% 0 0 -3%;
+		}
+		img.line {
+			position: absolute;
+			margin-top: 46%;
+		}
+		img.dot {
+			position: absolute;
+			right: 0;
+			margin-top: 39%;
+			opacity: 0.6;
+		}
+		p.right {
+			@extend p.left;
+			transform: rotate(90deg);
+			right: 0;
+			margin: 63% -4% 0 0;
 		}
 	}
 	.container {
 		.work {
-			.showreel-img {
-				display: flex;
-				flex-direction: row;
-				img {
-					justify-content: space-between;
+			.tagTitle {margin-left: 65px;}
+			ul.showreel-img {
+				padding: 50px 0 150px 0;
+				text-align: center;
+				li.box {
+					display: inline-block;
+					padding: 0 1px;
+					width: 382px;
+					height: 452px;
+					opacity: 0;
+					position: relative;
+					&:before {
+					    content: '';
+					    background: $orange;
+					    position: absolute;
+					    top: 0;
+					    bottom: 0;
+					    left: 0;
+					    right: 0;
+					}
+					&.seen {
+						opacity: 1;
+				      	&:nth-child(1) {
+				        	animation-delay: 0s;
+				      	}
+				      	&:nth-child(2) {
+				        	animation-delay: .5s;
+				      	}
+				       	&:nth-child(3) {
+				        	animation-delay: 1s;
+				      	}
+				      	&:before {
+					    	@include animation(fade 1s 1s forwards);
+					  	}
+				    }
+				}
+			}
+		}
+		.blog {
+			padding-top: 150px;
+			ul {
+				li {
+					display: inline-block;
+					&.blog-img {
+						width: 70%;
+						text-align: center;
+						a {
+							display: inline-block;
+							opacity: 1;
+							transition: opacity 0.5s;
+							img {
+								padding: 0 3px 1px 0;
+								&:hover {
+									opacity: 0.8;
+								}
+							}
+							&:hover {
+								opacity: 0.5;
+							}
+						}
+					}
+					&.blog-text {
+						width: 20%;
+						height: 406px;
+						padding-top: 60px;
+						vertical-align: top;
+						p {
+							@include font-size(16);
+							color: $white;
+							line-height: 145%;
+							padding: 40px 0;
+						}
+					}
 				}
 			}
 		}
 	}
+}
+@include keyframes(fade) {
+  	0% {top: 0;}
+  	100% {top: 100%;}
 }

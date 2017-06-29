@@ -6,12 +6,28 @@ append config
 
 block content
 	.wrapper.about-service
+		.background-item
+			img(src="../assets/images/el/semicircle.png")
+		.text-item ABOUT US
 		.container
-			section.about 
-				.about-box 
-					h1 About Us
-					p Lorem
-			section.service 
-				.about-box 
-					h1 About Us
-					p Lorem
+			.about-container
+				section.about 
+					.about-box 
+						.about-title
+							+tagTitle('ABOUT US','black')
+						.about-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum 
+
+
+
+				section.service 
+					.service-box
+						.service-circle#circle1
+							.circle-text MARKETING
+						.service-circle#circle2
+							.circle-text PRODUCTION
+						.service-circle#circle3.active
+							.circle-text STRATEGY
+					.service-description#service-desc1 1) MARKETING Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+					.service-description#service-desc2 2) PRODUCTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+					.service-description#service-desc3 3) STRATEGY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+

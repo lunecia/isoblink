@@ -1,0 +1,17 @@
+.about-service {
+	background-color: $gray;
+	.container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		section.about {
+
+			.about-box {
+				background-color: #fff;
+				border: 1px solid black;
+				width: 610px;
+				height: 525px;
+			}
+		}
+	}
+}

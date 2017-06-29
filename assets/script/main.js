@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 $(function () {
 	$('#circle1').hover(function () {
 		$('#circle1').addClass('active');
@@ -27,4 +28,10 @@ $(function () {
 		$('#service-desc1').css('display', 'none');
 		$('#service-desc2').css('display', 'none');
 	}, function () {});
+=======
+// navMenu
+$('.hamberger').on('click', function () {
+	$(this).toggleClass('open');
+	$('.nav-bar').toggleClass('open');
+>>>>>>> d85ca8fb0ba02f4dd8a0375e787a0575721e301f
 });

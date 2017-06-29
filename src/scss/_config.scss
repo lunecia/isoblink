@@ -223,6 +223,86 @@ h1,h2,h3,h4,h5,h6,p,a {
 
 //////////////////////////////////////
 
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 101;
+	.logo {
+		position: absolute;
+		left: 0;
+		width: 12%;
+		margin: 20px;
+	}
+	.hamberger {
+		width: 40px;
+		height: 40px;
+		margin: 20px;
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		right: 0;
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $white;
+			position: absolute;
+			right: 0;
+			opacity: 1;
+			transition: $transition;
+			@include transform-origin(center center);
+			&:nth-child(1) {width: 100%;}
+			&:nth-child(2) {
+				width: 85%;
+				margin: 10px 0;
+			}
+			&:nth-child(3) {
+				width: 65%;
+				margin: 20px 0;
+			}
+		}
+		&:hover {
+			span {
+				&:nth-child(1),
+				&:nth-child(3),
+				&:nth-child(2) {width: 80%;}
+			}	
+		}
+		&.open {
+			span {
+				&:nth-child(1) {
+					width: 80%;
+					@include transform(rotate(315deg) translateY(10px) translateX(-4px));
+				}
+				&:nth-child(2) {opacity: 0;}
+				&:nth-child(3) {
+					width: 80%;
+					@include transform(rotate(45deg) translateY(-10px) translateX(-4px));
+				}
+			}
+		}
+	}
+	.nav-bar {
+		position: absolute;
+		right: 0;
+		margin: 20px;
+		&.open {
+			right: 0;
+		    top: 0;
+		    bottom: 0;
+		    left: 0;
+		    margin: 0;
+			ul {
+				filter: blur(20px);
+				@include transform(scale(0.8));
+				li {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
 .tagTitle {
 	display:block;
 	position: relative;
@@ -249,3 +329,9 @@ h1,h2,h3,h4,h5,h6,p,a {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> d85ca8fb0ba02f4dd8a0375e787a0575721e301f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(() => {
 	$('#circle1').hover(() =>{
 		$('#circle1').addClass('active');
@@ -34,4 +35,10 @@ $(() => {
 	() => {
 		
 	});
+=======
+// navMenu
+$('.hamberger').on('click', function(){
+	$(this).toggleClass('open');
+	$('.nav-bar').toggleClass('open');
+>>>>>>> d85ca8fb0ba02f4dd8a0375e787a0575721e301f
 });

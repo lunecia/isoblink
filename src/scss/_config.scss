@@ -150,6 +150,7 @@ $transition: .5s;
 	padding: 0;
 	box-sizing: border-box;
 	font-weight: normal;
+	font-family: 'Roboto', sans-serif;
 	// -webkit-user-select: none;
 	// -khtml-user-select: none;
 	// -moz-user-select: none;
@@ -216,6 +217,35 @@ h1,h2,h3,h4,h5,h6,p,a {
 }
 
 
+//////////////////////////////////////
+
+// componants
+
+//////////////////////////////////////
+
+.tagTitle {
+	display:block;
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 4px;
+		height: 100%;
+		background: $orange;
+		left: 0;
+	}
+	h2 {
+		@include font-size(20);
+		text-transform: uppercase;
+		padding: 10px 20px;
+	}
+	&.black {
+		h2 {color: $black;}
+	}
+	&.white {
+		h2 {color: $white;}
+	}
+}
 
 
 

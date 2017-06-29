@@ -2,5 +2,25 @@
 - var keywords = ''
 - var description = ''
 
+- var menu = [{'title':'home','link':'#title'},{'title':'about us','link':'#aboutus'},{'title':'work','link':'#work'},{'title':'blog','link':'#blog'},{'title':'contact','link':'#contact'}]
+
 
 //- mixin
+
+mixin menu(itemMenu)
+	.nav-bar
+		.hamberger
+			span
+			span
+			span
+		ul
+			each item in itemMenu
+				li
+					- var menuLink = {'href':item.link}
+					a()&attributes(manuLink)= item.title
+
+mixin tagTitle(textTitle,color)
+	.tagTitle(class=color)
+		h2 #{textTitle}
+
+	

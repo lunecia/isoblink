@@ -1,14 +1,31 @@
 .title {
-	width: 100%;
+	top: 0;
+	left: 0;
 	height: 100vh;
-	background: $black;
-	h1 {
-		color: $white;
+	width: 100%;
+	// background: $black;
+	overflow: hidden;
+	.background-ani {
+		background: url('../images/01-title/isobar-sprite.jpg');
 		position: absolute;
 		top: 50%;
-	    left: 50%;
-	    margin-top: -28px;
-	    margin-left: -118px;
-		@include font-size(50);
+		transform: translateY(-50%) translateX(-2%);
+		height: 100%;
+		width: 2500%;
+		background-size: 100% 100%;
+		transition: .5s;
+		&.ani {
+			animation: fade 3.5s steps(24) forwards;
+		}
 	}
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(-50%) translateX(0%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-100%);
+    left: 104%;
+  }
 }

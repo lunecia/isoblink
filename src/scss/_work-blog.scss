@@ -1,0 +1,22 @@
+.work-blog {
+	background-color: $black;
+	.bg {
+		p {
+			color: $white;
+			transform: rotate(-90deg);
+			float: left;
+			margin-top: 250px;
+		}
+	}
+	.container {
+		.work {
+			.showreel-img {
+				display: flex;
+				flex-direction: row;
+				img {
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}

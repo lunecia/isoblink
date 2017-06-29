@@ -1,23 +1,34 @@
 extends docwrap
 
+append config
+	- var keywords = 'isobar'
+	- var description = 'isobar'
+
 block content
 	.wrapper.work-blog
 		.bg
-			p showreel
+			p.left showreel
+			img.line(src="../assets/images/el/line.png", alt="")
+			img.dot(src="../assets/images/el/dot.png", alt="")
+			p.right isobar blog
 		.container
 			section.work
-				h2 showreel
-				.showreel-img
-					img(src="../assets/images/03-showreel/pic1.png", alt="")
-					img(src="../assets/images/03-showreel/pic2.png", alt="")
-					img(src="../assets/images/03-showreel/pic3.png", alt="")
+				+tagTitle('SHOWREEL','white')
+				ul.showreel-img
+					li.box
+						img(src="../assets/images/03-showreel/pic1.png", alt="")
+					li.box
+						img(src="../assets/images/03-showreel/pic2.png", alt="")
+					li.box
+						img(src="../assets/images/03-showreel/pic3.png", alt="")
 			section.blog
-				.blog-img
-					img(src="../assets/images/04-blog/1.jpg", alt="")
-					img(src="../assets/images/04-blog/2.jpg", alt="")
-					img(src="../assets/images/04-blog/3.jpg", alt="")
-					img(src="../assets/images/04-blog/4.jpg", alt="")
-				.blog-text
-					h2 isobar blog
-					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi assumenda, qui similique repellendus ipsum asperiores voluptate, officiis porro placeat? Esse.
-					.btn read more
+				ul
+					li.blog-img
+							a(href=""): img(src="../assets/images/04-blog/1.jpg", alt="")
+							a(href=""): img(src="../assets/images/04-blog/2.jpg", alt="")
+							a(href=""): img(src="../assets/images/04-blog/3.jpg", alt="")
+							a(href=""): img(src="../assets/images/04-blog/4.jpg", alt="")
+					li.blog-text
+							+tagTitle('ISOBAR BLOG','white')
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi assumenda, qui similique repellendus ipsum asperiores voluptate, officiis porro placeat? Esse.
+							a.btn read more

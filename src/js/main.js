@@ -1,3 +1,4 @@
+
 $(() => {
 	$('#circle1').hover(() =>{
 		$('#circle1').addClass('active');
@@ -56,4 +57,10 @@ $(window).on("load", function() {
 	 	$('header').fadeIn();
 	 	$('.scroll').fadeIn();  
 	}, 5500);
+});
+$(".box").waypoint(function(){
+		$(this).addClass('seen animated fadeInDown');
+	}, { 
+		offset: 'bottom-in-view'
+	
 });

@@ -50,7 +50,7 @@ $(window).on("load", function () {
 		$('.scroll').fadeIn();
 	}, 5500);
 });
-$(".box").waypoint(function () {
+$(".fade-box").waypoint(function () {
 	$(this).addClass('seen animated fadeInDown');
 }, {
 	offset: 'bottom-in-view'

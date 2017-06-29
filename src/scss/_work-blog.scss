@@ -37,7 +37,7 @@
 			ul.showreel-img {
 				padding: 50px 0 150px 0;
 				text-align: center;
-				li.box {
+				li.fade-box {
 					display: inline-block;
 					padding: 0 1px;
 					width: 382px;
@@ -65,7 +65,7 @@
 				        	animation-delay: 1s;
 				      	}
 				      	&:before {
-					    	@include animation(fade 1s 1s forwards);
+					    	@include animation(fade-work 1s 1s forwards);
 					  	}
 				    }
 				}
@@ -111,7 +111,7 @@
 		}
 	}
 }
-@include keyframes(fade) {
+@include keyframes(fade-work) {
   	0% {top: 0;}
   	100% {top: 100%;}
 }

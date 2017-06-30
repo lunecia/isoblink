@@ -64,3 +64,12 @@ $(".fade-box").waypoint(function(){
 		offset: 'bottom-in-view'
 	
 });
+$('.tilt-box').tilt({
+	scale: 1,
+  	maxGlare: 0.3
+});
+$('.tilt-box2').tilt({
+	scale: 1,
+  	maxGlare: 0.3,
+  	perspective: 1500
+});

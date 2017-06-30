@@ -39,6 +39,7 @@ gulp.task('eslint', function() {
 });
 
 gulp.task('watch', function() {
+	livereload.listen();
 	gulp.watch('src/pug/**/*.pug',['views']);
 	gulp.watch('src/scss/*.scss',['sass']);
 	gulp.watch('src/js/*.js',['babel']);

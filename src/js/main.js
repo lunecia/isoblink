@@ -59,7 +59,7 @@ $(window).on("load", function() {
 	}, 5500);
 	setTimeout(function() {
 	 	$('.enter-site').addClass('loaded');   
-	}, 6000);
+	}, 0);
 });
 
 // scrollTo

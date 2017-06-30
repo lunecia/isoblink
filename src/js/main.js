@@ -60,7 +60,7 @@ $(window).on("load", function() {
 });
 
 // scrollTo
-$('.goto').on('click', function(e){
+$('.goto a').on('click', function(e){
 	e.preventDefault();
 	$.scrollTo(this.hash, 400);
 });

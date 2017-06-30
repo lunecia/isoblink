@@ -12,9 +12,9 @@ mixin menu(itemMenu)
 		.blur
 		ul
 			each item in itemMenu
-				li
-					- var menuLink = {'href':item.link}
-					a()&attributes(manuLink)= item.title
+				li.goto
+					- var href = {'href':item.link}
+					a()&attributes(href)= item.title
 
 mixin tagTitle(textTitle,color)
 	.tagTitle(class=color)

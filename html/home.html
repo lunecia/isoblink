@@ -26,38 +26,112 @@
       <div class="nav-bar">
         <div class="blur"></div>
         <ul>
-          <li><a>home</a>
+          <li class="goto"><a href="#title">home</a>
           </li>
-          <li><a>about us</a>
+          <li class="goto"><a href="#aboutus">about us</a>
           </li>
-          <li><a>work</a>
+          <li class="goto"><a href="#work">work</a>
           </li>
-          <li><a>blog</a>
+          <li class="goto"><a href="#blog">blog</a>
           </li>
-          <li><a>contact</a>
+          <li class="goto"><a href="#contact">contact</a>
           </li>
         </ul>
       </div>
     </header>
-    <div class="wrapper title">
+    <div class="wrapper title" id="title">
       <div class="background-ani ani"></div>
       <div class="scroll"></div>
     </div>
-    <div class="wrapper about-service">
+    <div class="wrapper about-service" id="aboutus">
+      <div class="background-item"><img src="../assets/images/el/semicircle.png"></div>
+      <div class="text-item">ABOUT US</div>
       <div class="container">
-        <section class="about"></section>
-        <section class="service"></section>
+        <div class="about-container">
+          <section class="about"> 
+            <div class="about-box"> 
+              <div class="about-title">
+                <div class="tagTitle black">
+                  <h2>ABOUT US</h2>
+                </div>
+              </div>
+              <div class="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </div>
+            </div>
+          </section>
+          <section class="service"> 
+            <div class="service-box">
+              <div class="service-circle" id="circle1">
+                <div class="circle-text">MARKETING</div>
+              </div>
+              <div class="service-circle" id="circle2">
+                <div class="circle-text">PRODUCTION</div>
+              </div>
+              <div class="service-circle active" id="circle3">
+                <div class="circle-text">STRATEGY</div>
+              </div>
+            </div>
+            <div class="service-description" id="service-desc1">1) MARKETING Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </div>
+            <div class="service-description" id="service-desc2">2) PRODUCTION Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </div>
+            <div class="service-description" id="service-desc3">3) STRATEGY Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut </div>
+          </section>
+        </div>
       </div>
     </div>
     <div class="wrapper work-blog">
+      <div class="bg">
+        <p class="left">showreel</p><img class="line" src="../assets/images/el/line.png" alt=""><img class="dot" src="../assets/images/el/dot.png" alt="">
+        <p class="right">isobar blog</p>
+      </div>
       <div class="container">
-        <section class="work"></section>
-        <section class="blog"></section>
+        <section class="work" id="work">
+          <div class="tagTitle white">
+            <h2>SHOWREEL</h2>
+          </div>
+          <ul class="showreel-img">
+            <li class="fade-box"><a class="tilt-box2" href="#"><img src="../assets/images/03-showreel/pic1.png" alt=""></a></li>
+            <li class="fade-box"><a class="tilt-box2" href="#"><img src="../assets/images/03-showreel/pic2.png" alt=""></a></li>
+            <li class="fade-box"><a class="tilt-box2" href="#"><img src="../assets/images/03-showreel/pic3.png" alt=""></a></li>
+          </ul>
+        </section>
+        <section class="blog" id="blog">
+          <ul>
+            <li class="blog-img"><a class="tilt-box" href="#"><img src="../assets/images/04-blog/1.jpg" alt=""></a><a class="tilt-box" href="#"><img src="../assets/images/04-blog/2.jpg" alt=""></a><a class="tilt-box" href="#"><img src="../assets/images/04-blog/3.jpg" alt=""></a><a class="tilt-box" href="#"><img src="../assets/images/04-blog/4.jpg" alt=""></a></li>
+            <li class="blog-text">
+              <div class="tagTitle white">
+                <h2>ISOBAR BLOG</h2>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi assumenda, qui similique repellendus ipsum asperiores voluptate, officiis porro placeat? Esse.</p><a class="btn">read more</a>
+            </li>
+          </ul>
+        </section>
       </div>
     </div>
-    <div class="wrapper career-contact">
-      <section class="career"></section>
-      <section class="contact"></section>
+    <div class="wrapper career-contact" id="contact">
+      <div class="bg">
+        <p class="left">careers</p>
+        <p class="right">contact us</p>
+      </div>
+      <div class="container">
+        <div class="career-contact-box">
+          <section class="career">
+            <div class="tagTitle black">
+              <h2>CAREERS</h2>
+            </div>
+            <div class="career-box career-contact-border">
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><a class="btn">find job</a>
+            </div>
+          </section>
+          <section class="contact">
+            <div class="tagTitle black">
+              <h2>CONTACT US</h2>
+            </div>
+            <div class="contact-box career-contact-border">
+              <p>33th Fl., U Chu Liang Bldg<br/>968 Rama IV Road, Silom Bangrak, Bangkok 10500 | Thailand<br/>026324575</p>
+              <div class="group-btn"><a class="btn mail" href="">e-mail</a><a class="btn map" href="">map</a></div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
     <footer>
       <h5>copyright &copy; all rights reserved isobar thailand co.,ltd</h5>

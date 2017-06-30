@@ -1,24 +1,14 @@
 extends docwrap
 
+include about_us
+include work-blog
+include career-contact
+
 append config
 	- var keywords = 'isobar'
 	- var description = 'isobar'
 
 block content
-	.wrapper.title
+	.wrapper.title#title
 		.background-ani.ani
 		.scroll
-
-	.wrapper.about-service
-		.container
-			section.about
-			section.service
-
-	.wrapper.work-blog
-		.container
-			section.work
-			section.blog
-
-	.wrapper.career-contact
-		section.career
-		section.contact

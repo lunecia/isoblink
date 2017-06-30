@@ -72,6 +72,8 @@ $(".fade-box").waypoint(function(){
 		offset: 'bottom-in-view'
 	
 });
+
+//tilt
 $('.tilt-box').tilt({
 	scale: 1,
   	maxGlare: 0.3

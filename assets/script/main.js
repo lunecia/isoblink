@@ -62,7 +62,7 @@ $(window).on("load", function () {
 	}, 5500);
 	setTimeout(function () {
 		$('.enter-site').addClass('loaded');
-	}, 0);
+	}, 6000);
 });
 
 // scrollTo

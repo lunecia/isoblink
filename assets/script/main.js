@@ -32,12 +32,12 @@ $(function () {
 $('.hamberger').on('click', function () {
 	$(this).toggleClass('open');
 	$('.nav-bar').toggleClass('open');
-	$('.wrapper').toggleClass('blur');
+	$('.wrapper,footer,.logo').toggleClass('blur');
 });
 $('.nav-bar').find('li').on('click', function () {
 	$('.hamberger').toggleClass('open');
 	$('.nav-bar').toggleClass('open');
-	$('.wrapper').toggleClass('blur');
+	$('.wrapper,footer,.logo').toggleClass('blur');
 });
 
 // preload
@@ -50,6 +50,14 @@ $(window).on("load", function () {
 		$('.scroll').fadeIn();
 	}, 5500);
 });
+
+// scrollTo
+$('.goto').on('click', function (e) {
+	e.preventDefault();
+	$.scrollTo(this.hash, 400);
+});
+
+//waypoints
 $(".fade-box").waypoint(function () {
 	$(this).addClass('seen animated fadeInDown');
 }, {

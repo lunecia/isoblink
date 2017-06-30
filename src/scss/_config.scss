@@ -328,6 +328,18 @@ header {
 	}
 }
 
+footer {
+	background: $black;
+	text-align: center;
+	h5 {
+		@include font-size(18);
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		padding: 20px 0;
+		color: $white;
+	}
+}
+
 .tagTitle {
 	display:block;
 	position: relative;

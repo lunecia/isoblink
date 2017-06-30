@@ -57,6 +57,9 @@ $(window).on("load", function() {
 	 	$('header').fadeIn();
 	 	$('.scroll').fadeIn();  
 	}, 5500);
+	setTimeout(function() {
+	 	$('.enter-site').addClass('loaded');   
+	}, 6000);
 });
 
 // scrollTo

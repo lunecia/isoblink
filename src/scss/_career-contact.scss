@@ -27,10 +27,14 @@
 			section.career, section.contact {
 				display: inline-block;
 				width: 48%;
-				height: 400px;
+				height: 420px;
 				padding: 50px;
 				vertical-align: top;
-				.tagTitle {text-align: left;}
+				.tagTitle {
+					text-align: left;
+					position: relative;
+					z-index: -5;
+				}
 				.career-box, .contact-box {
 					p {
 						@include font-size(16);

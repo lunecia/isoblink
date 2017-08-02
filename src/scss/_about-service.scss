@@ -12,19 +12,34 @@
     	font-size: 36px;
     	color: #fff;
     	transform: rotate(90deg);
-    	top: 50%;
+    	top: 10%;
+    	@include breakpoint(mobile) {
+    		right: -17%;
+    		top: 10%;
+    	}
+    	@include breakpoint(tablet-wide) {
+			right: -2%;
+			top: 45%;
+		}
 	}
 
 	.container {
 
 		.about-container {
 			padding-top: 40px;
+			@include breakpoint(tablet) {
+				padding-top: 0;
+			}
 
 			section.about {
 				opacity: 0;
 				width: 45%;
 				display: inline-block;
 				position: relative;
+				@include breakpoint(tablet) {
+					display: block;
+					width: 100%;
+				}
 
 				&:before {
 				    content: '';
@@ -56,6 +71,12 @@
 					background-color: #fff;
 					box-shadow: 0px 0px 20px #a5a5a5;
 					padding: 60px;
+					@include breakpoint(tablet) {
+						padding: 40px;
+					}
+					@include breakpoint(mobile) {
+						padding: 30px;
+					}
 
 					.about-title {
 						padding-left: 10px;
@@ -66,24 +87,51 @@
 						padding-top: 60px;
 						line-height: 1.8;
 						text-indent: 18px;
+						@include breakpoint(tablet) {
+							padding-top: 30px;
+						}
 					}
 				}
 			}
 
 			section.service {
 				display: inline-block;
-				width: 53%;
+				width: 50%;
 				vertical-align: top;
+				position: relative;
+				margin-left: 50px;
+				@include breakpoint(tablet) {
+					display: block;
+					width: 100%;
+					margin-top: 0;
+					margin-left: 0;
+				}
 
 				.service-box {
 					width: 100%;
 					position: relative;
-					height: 602px;
+					height: 605px;
 	    			margin-top: -100px;
+	    			@include breakpoint(tablet) {
+	    				margin-top: 0;
+	    			}
+	    			@include breakpoint(tablet-wide) {
+	    				margin-left: 120px;
+	    			}
+	    			@include breakpoint(mobile) {
+	    				margin-left: 0;
+	    				height: 400px;
+	    			}
+	    			@media screen and (max-width: 413px) and (min-width: 375px) {
+						margin-left: 30px;
+	    			}
+	    			@media screen and (max-width: 667px) and (min-width: 414px) {
+						margin-left: 50px;
+	    			}
 
 	    			.circle-container {
 	    				opacity: 0;	
-	    				position: relative;
+	    				position: absolute;
 	    				&.active {
 	    					z-index: 2;
 	    				}
@@ -120,17 +168,24 @@
 						width: 300px;
 						height: 300px;
 						border: 1px solid #c6c6c6;
-						border-radius: 325px;
+						border-radius: 50%;
 						background-color: #c6c6c6;
 						opacity: 0.57;
 					    display: flex;
 					    justify-content: center;
 					    align-items: center;
+					    @include breakpoint(mobile) {
+					    	width: 160px;
+					    	height: 160px;
+					    }
 
 					    .circle-text {
 					    	color: #fff;
 				    	    @include font-size(20);
 	    					letter-spacing: 3px;
+	    					@include breakpoint(mobile) {
+	    						@include font-size(14);
+	    					}
 					    }
 
 					    &.active {
@@ -169,28 +224,41 @@
 					    	background-color: $orange;
 					    	opacity: 0.85;
 					    	z-index: 2;
+					    	transition: .5s;
 					    }
 					}
 
 					#circle1 {
-						top: 35px;
-	    				right: 136px;
+						top: 70px;
+						left: 185px;
+						@include breakpoint(mobile) {
+							left: 60px;
+						}
 					}
 					#circle2 {
-					    top: 235px;
-	   			 		right: 9px;
+					    top: 265px;
+					    left: 60px;
+					    @include breakpoint(mobile) {
+					    	top: 195px;
+					    	left: 0;
+					    }
 					}
 					#circle3 {
-					    top: 235px;
-	    				right: 253px;
+					    top: 265px;
+					    left: 300px;
+					    @include breakpoint(mobile) {
+					    	top: 195px;
+					    	left: 120px;
+					    }
 					}
 				}
 
 				.service-description {
 					@include font-size(16);
-					margin-left: 130px;
 					line-height: 1.5;
-					text-indent: 18px;
+					@include breakpoint(tablet) {
+						margin-left: 0;
+					}
 
 					&#service-desc1 {
 						display: none;

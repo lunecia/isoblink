@@ -13,12 +13,27 @@
 			letter-spacing: 5px;
 			opacity: 0.8;
 			margin: 21% 0 0 -2%;
+			@include breakpoint(tablet) {
+				margin: 18% 0 0 -5%;
+			}
+			@include breakpoint(mobile) {
+				margin: 65% 0 0 -21%;
+			}
 		}
 		p.right {
 			@extend p.left;
 			transform: rotate(90deg);
 			right: 0;
 			margin: 12% -4% 0 0%;
+			@include breakpoint(tablet) {
+				margin: 105% -10% 0 0;
+			}
+			@include breakpoint(tablet-wide) {
+				margin: 75% -10% 0 0;
+			}
+			@include breakpoint(mobile) {
+				margin: 220% -31% 0 0;
+			}
 		}
 	}
 	.container {
@@ -30,17 +45,62 @@
 				height: 420px;
 				padding: 50px;
 				vertical-align: top;
+				@include breakpoint(tablet) {
+					display: block;
+					width: 100%;
+					padding: 0;
+					height: 360px;
+				}
+				@include breakpoint(mobile) {
+					height: 412px;
+				}
+				&.contact {
+					@include breakpoint(tablet) {
+						margin-top: 50px;
+					}
+					@include breakpoint(mobile) {
+						margin-top: 50px;
+						height: 312px;
+					}
+				}
 				.tagTitle {
 					text-align: left;
 					position: relative;
 					z-index: -5;
 				}
 				.career-box, .contact-box {
-					p {
-						@include font-size(16);
-						line-height: 145%;
-						padding-bottom: 50px;
-						text-align: left;
+					&.career-contact-border {
+						border: 3px solid $orange;
+					    padding: 60px 40px;
+					    box-shadow: 0 0 10px #ccc;
+					    margin: 10px 0;
+					    height: 300px;
+					    @include breakpoint(tablet) {
+					    	height: 280px;
+					    }
+					    @include breakpoint(mobile) {
+					    	padding: 30px 20px;
+					    	height: 350px;
+					    }
+					    p {
+							@include font-size(16);
+							line-height: 145%;
+							padding-bottom: 50px;
+							text-align: left;
+							@include breakpoint(tablet) {
+								text-align: center;
+							}
+							@include breakpoint(mobile) {
+								padding-bottom: 30px;
+							}
+						}
+					}
+					&.contact-box {
+						&.career-contact-border {
+							@include breakpoint(mobile) {
+								height: 250px;
+							}
+						}
 					}
 				}
 			}

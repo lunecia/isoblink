@@ -13,47 +13,120 @@
 			letter-spacing: 5px;
 			opacity: 0.6;
 			margin: 25% 0 0 -3%;
+			@include breakpoint(tablet) {
+				margin: 37% 0 0 -7%;
+			}
+			@include breakpoint(mobile) {
+				margin: 67% 0 0 -26%;
+			}
 		}
 		img.line {
 			position: absolute;
 			margin-top: 46%;
+			@include breakpoint(tablet) {
+				margin-top: 135%;
+			}
+			@include breakpoint(tablet-wide) {
+				margin-top: 102%;
+			}
+			@include breakpoint(mobile) {
+				margin-top: 330%;
+			}
 		}
 		img.dot {
 			position: absolute;
 			right: 0;
 			margin-top: 39%;
 			opacity: 0.6;
+			@include breakpoint(tablet) {
+				margin-top: 82%;
+			}
+			@include breakpoint(tablet-wide) {
+				margin-top: 58%;
+			}
+			@include breakpoint(mobile) {
+				margin-top: 147%;
+			}
 		}
 		p.right {
 			@extend p.left;
 			transform: rotate(90deg);
 			right: 0;
 			margin: 63% -4% 0 0;
+			@include breakpoint(tablet) {
+				margin: 196% -11% 0 0;
+			}
+			@include breakpoint(tablet-wide) {
+				margin: 158% -10% 0 0;
+			}
+			@include breakpoint(mobile) {
+				margin: 535% -32% 0 0;
+			}
 		}
 	}
 	.container {
 		.work {
-			.tagTitle {margin-left: 65px;}
+			.tagTitle {
+				margin-left: 65px;
+				@include breakpoint(tablet) {
+					margin-left: 0;
+				}
+			}
 			ul.showreel-img {
 				padding: 50px 0 150px 0;
 				text-align: center;
+				@include breakpoint(tablet) {
+					padding: 50px 0 100px 0;
+				}
+				@include breakpoint(mobile) {
+					padding: 50px 0 80px 0;
+				}
+				li {
+					@include breakpoint(tablet) {
+						width: calc(100% / 3 - 2px);
+					}
+					@include breakpoint(mobile) {
+						width: 100%;
+					}
+				}
 			}
 		}
 		.blog {
-			padding-top: 150px;
+			padding-top: 120px;
+			@include breakpoint(tablet) {
+				padding-top: 0;
+			}
 			ul {
 				li {
 					display: inline-block;
+					@include breakpoint(tablet) {
+						display: block;
+					}
 					&.blog-img {
 						width: 70%;
 						text-align: center;
+						@include breakpoint(tablet) {
+							width: 100%;
+						}
 						a {
 							display: inline-block;
 							opacity: 1;
 							transition: opacity 0.5s;
+							@include breakpoint(tablet) {
+								width: 50%;
+							}
+							@include breakpoint(tablet-wide) {
+								width: 42%;
+							}
+							@include breakpoint(mobile) {
+								width: 100%;
+							}
 							img {
-								padding: 0 3px 1px 0;
+								padding: 0 5px 1px 0;
 								position: relative;
+								@include breakpoint(tablet-wide) {
+									padding: 0 2px 4px 0;
+								}
 								&:before {
 									content: '';
 									position: absolute;
@@ -78,6 +151,13 @@
 						height: 406px;
 						padding-top: 60px;
 						vertical-align: top;
+						@include breakpoint(tablet) {
+							width: 100%;
+							height: 280px;
+						}
+						@include breakpoint(mobile) {
+							height: 348px;
+						}
 						p {
 							@include font-size(16);
 							color: $white;
@@ -127,9 +207,18 @@
       	&:before {
 	    	@include animation(fade-work 1s 1s forwards);
 	  	}
+	  	&.last {
+			&:before {
+		      	@include animation(fade-left 1s 1s forwards);
+		    }
+	  	}
     }
 }
 @include keyframes(fade-work) {
   	0% {top: 0;}
   	100% {top: 100%;}
+}
+@include keyframes(fade-left) {
+  	0% {left: 0;}
+  	100% {left: 100%;}
 }

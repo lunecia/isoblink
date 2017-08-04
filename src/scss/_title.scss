@@ -36,41 +36,52 @@
 			animation: fadeHeight 2s ease infinite;
 		}
 	}
+	.text-cover {
+		position: absolute;
+	    width: 70%;
+	    top: 50%;
+	    left: 8%;
+	    
+	    @include breakpoint(tablet) {
+			width: 100%;
+			left: 2%;
+		}
+		@include breakpoint(tablet-wide) {
+			left: 14%;
+		}
+	}
 	.text {
-	  position: absolute;
-	  width: 37.5%;
-	  left: 50%;
-	  margin-left: -18%;
-	  padding: 10px;
-	  height: 100px;
-	  top: 50%;
-	  margin-top: -20px;
-	  background: rgba(255,255,255,.5);
-	  &.main {
-	  	 display: block;
-	  }
-	  &.hover {
-	  	display: none;
-	  }
-	  p {
+		position: absolute;
+		// width: 37.5%;
+		left: 50%;
+		margin-left: -18%;
+		padding: 10px;
+		height: 100px;
+		top: 50%;
+		margin-top: -20px;
+		@include breakpoint(tablet) {
+			left: 25%;
+			margin-left: -23%;
+		}
+		&.main {display: block;}
+		&.need {display: none;}
+	  	p {
 			display: inline-block;
 			vertical-align: top;
 			margin: 0;
 			color: $black;
+			background: rgba(255,255,255,.5);
+			&.text-ani {margin-left: -2px;}
 			@include font-size(65)
 			span {
 				padding-left: 8px;
-				&.test {
-					@include font-size(34);
-    				top: 32px;
-    			}
+				&.word {background: rgba(255,255,255,.2);}
 			}
 		}
 	}
-
 	.word {
 		position: absolute;
-		width: 300px;
+		width: 325px;
 		opacity: 0;
 	}
 

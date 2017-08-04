@@ -290,9 +290,12 @@ function splitLetters(word) {
 changeWord();
 setInterval(changeWord, 4000);
 
-$('.text.main').hover(function(){
-	$(this).find('span').toggleClass('test');
-	// $(this).find('span').text('test');
+$('.text-cover').hover(function(){
+	$('.main').hide();
+	$('.need').show();
+}, function(){
+	$('.need').hide();
+	$('.main').show();
 });
 
 
